@@ -21,7 +21,7 @@ func sendResponse(conn *net.UDPConn, addr *net.UDPAddr, msg []byte) {
 }
 
 func main() {
-	port := "10001"
+	port := "4500"
 
 	fmt.Println("Listening on", port)
 
@@ -30,7 +30,7 @@ func main() {
 	fmt.Println("Hostname=" + hostname)
 	checkError(err)
 
-	/* Lets prepare a address at any address at port 10001*/
+	/* Lets prepare a address at any address at port 4500 */
 	serverAddr, err := net.ResolveUDPAddr("udp", ":"+port)
 	checkError(err)
 
